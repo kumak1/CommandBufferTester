@@ -89,8 +89,11 @@ namespace CommandBufferTester
             // UV が上下逆になってる端末の対処
             buffer.Blit(SrcTempId(), DestTempId(), new Material(Shader.Find(GrabShader)), 0);
 
-            foreach (var material in materials)
-                buffer.Blit(SrcTempId(), DestTempId(), material, 0);
+            if (materials != null)
+            {
+                foreach (var material in materials)
+                    buffer.Blit(SrcTempId(), DestTempId(), material, 0);
+            }
 
             // PostProcess で処理したレンダリング結果をカメラに戻す
             buffer.Blit(SrcTempId(), BuiltinRenderTextureType.CameraTarget);
