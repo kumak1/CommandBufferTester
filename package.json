@@ -1,0 +1,10 @@
+{
+  "name": "com.unity.command-buffer-tester",
+  "displayName": "Command Buffer Tester",
+  "version": "0.1.0",
+  "unity": "2019.4",
+  "description": "This package is\nfor testing package manager.",
+  "keywords": [""],
+  "category": "Test",
+  "dependencies": {}
+}
