@@ -51,9 +51,9 @@ namespace CommandBufferTester
             // 通常実行時
             var screenRes = UnityStats.screenRes.Split('x');
             return (int.Parse(screenRes[0]), int.Parse(screenRes[1]));
-#endif
-
+#else
             return (1920, 1080);
+#endif
         }
 
         private static RenderTextureFormat TextureFormat() =>
